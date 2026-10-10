@@ -1,48 +1,98 @@
-# EventSphere — Online Event Registration Platform
+# EventSphere — College Event Management & Registration Platform
 
-A student-friendly MERN-stack project starter for managing college events and registrations.
+EventSphere is a web-based platform designed to make college event discovery and registration easier. Users can browse events, register for events, and view registration status. Event data is stored in MongoDB Atlas.
 
-## Features
-- Browse events
-- Register a participant for an event
-- View registrations for an event
-- Admin form to add events (demo-level; secure admin authentication is not included in this deadline-friendly starter)
-- MongoDB persistence when configured
-- Demo mode with sample events if MongoDB is not configured
+## 🌐 Live Demo
 
-## Requirements
-- Node.js LTS and npm
-- MongoDB Atlas account (recommended) or local MongoDB
+- **Website:** https://event-sphere-6e6p-ten.vercel.app/
+- **Backend API:** https://eventsphere-gkls.onrender.com
+
+## ✨ Features
+
+- Browse available college events
+- Register for events
+- Prevent duplicate registrations
+- View registration status
+- Create and manage events through the event form
+- Store event and registration data in MongoDB
+- Responsive interface for desktop and mobile devices
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Vite, JavaScript, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Deployment:** Vercel and Render
+- **Version Control:** Git and GitHub
+
+## 📁 Project Structure
+
+```text
+EventSphere/
+├── client/       # React frontend
+├── server/       # Express backend and API
+├── .gitignore
+└── README.md
+```
+
+## 🚀 Run Locally
+
+### Prerequisites
+
+- Node.js and npm
+- MongoDB Atlas account or local MongoDB
 - Git
 
-## Run locally
-
 ### 1. Start the backend
+
 ```bash
 cd server
 npm install
 ```
-Copy `.env.example` to `.env` and set `MONGODB_URI` if you have MongoDB Atlas. Then:
-```bash
-npm run dev
-```
-Backend runs on `http://localhost:5000`.
 
-### 2. Start the frontend in a second terminal
+Create a local `.env` file using `.env.example` as a reference. Configure `PORT`, `MONGODB_URI`, and `CLIENT_ORIGIN` with your local settings.
+
+Then start the backend using the script configured in `server/package.json`, for example:
+
+```bash
+npm start
+```
+
+### 2. Start the frontend
+
+Open a second terminal:
+
 ```bash
 cd client
 npm install
 npm run dev
 ```
-Open the local URL printed by Vite, usually `http://localhost:5173`.
 
-The frontend uses `VITE_API_URL` and defaults to `http://localhost:5000/api`.
+Open the local URL shown by Vite, usually `http://localhost:5173`.
 
-## Deploy
-- Backend: Render or another Node.js host. Set `MONGODB_URI` and `CLIENT_ORIGIN`.
-- Frontend: Vercel or Netlify. Set `VITE_API_URL` to your deployed backend URL plus `/api`.
-- MongoDB: create a MongoDB Atlas database and allow the deployed backend IP/network access according to Atlas guidance.
-- After deployment, test registration and event creation on the public URL.
+Configure the frontend API URL to point to your backend. For local development, it is usually `http://localhost:5000/api`.
+
+## ☁️ Deployment
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+
+Configure deployment environment variables in the relevant hosting dashboards. Never commit real passwords, database connection strings, or other secrets to GitHub.
+
+## 🔐 Security Notes
+
+This project is an academic demonstration. Before using it for real events, implement secure administrator authentication, server-side validation, rate limiting, and appropriate access controls.
+
+## 👩‍💻 Author
+
+**K. Rishitha**
+
+GitHub: [@rishithak0416](https://github.com/rishithak0416)
+
+---
+
+*Built as a college project to practise full-stack web development and database integration.*
 
 ## Important
 This is an academic demo starter, not a production-ready ticketing system. Add proper admin authentication, validation, rate limiting and access controls before real-world use.
