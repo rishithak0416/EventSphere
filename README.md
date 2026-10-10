@@ -16,6 +16,10 @@ EventSphere is a web-based platform designed to make college event discovery and
 - Create and manage events through the event form
 - Store event and registration data in MongoDB
 - Responsive interface for desktop and mobile devices
+  ## Project Screenshot
+
+![EventSphere Homepage](eventsphere-home.png.png)
+
 
 ## 🛠️ Tech Stack
 
