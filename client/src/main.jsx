@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { CalendarDays, MapPin, Users, Sparkles, Ticket, Plus, X, Search } from "lucide-react";
 import "./style.css";
 
-const API = (import.meta.env.VITE_API_URL || "http://localhost:5000/api").replace(/\/$/, "");
+const API = (import.meta.env.VITE_API_URL || "https://eventsphere-gkls.onrender.com/api").replace(/\/$/, "");
 function App() {
   const [events, setEvents] = useState([]);
   const [query, setQuery] = useState("");
